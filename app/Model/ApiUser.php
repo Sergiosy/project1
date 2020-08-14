@@ -1,20 +1,20 @@
 <?php
 
-namespace App;
+namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class SongsModel extends Model
+class ApiUser extends Model
 {
-    protected $connection = 'mysql';
-    protected $table = 'songs';
+    protected $table = 'table_users';
     protected $primaryKey = 'id';
     protected $guarded = [];
     protected $hidden = ['created_at', 'updated_at'];
     protected $fillable = [
-        'author',
-        'album',
         'name',
-        'duration',
+        'email',
+        'password',
+        'auth_key',
+        'role',
     ];
 }
